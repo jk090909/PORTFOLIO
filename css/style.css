@@ -16,7 +16,6 @@
   }
   
   #main_header {
-    /* outline: 2px solid red; */
     position: fixed;
     width: 100%;
     background: #171717;
@@ -87,10 +86,10 @@
   font-weight: 500;
   animation-duration: 0.3s;
   animation-iteration-count: infinite;
-  animation-name: cursor;
+  animation-name: blink;
 } 
-    @keyframes cursor{
-        0%{border-right: 1px solid #fff} 
+    @keyframes blink{
+        0%{border-right: 1px solid #000} 
         50%{border-right: 1px solid #000} 
         100%{border-right: 1px solid #fff} 
     }
@@ -124,6 +123,10 @@
     line-height: 2em;
   }
 
+  #about .tence span {
+    font-size: 24px;
+  }
+
   #about .sk li > img {
     /* outline: 2px solid black; */
     width: 74px;
@@ -135,9 +138,13 @@
   #about .sk li > img:last-child {
     margin-right: 60px;
   }
+  
+  #about .sk .git {
+    width: 114px;
+    margin-left: -20px;
+  }
 
   #about .ill li > img {
-    /* outline: 2px solid black; */
     width: 74px;
     height: 74px;
     margin-right: 57px;
@@ -151,7 +158,9 @@
   }
 
   #about .photo > img {
-      box-shadow: -50px -50px 0 #202020;
+      box-shadow:
+       -50px -50px 0 -10px #fff, 
+       -50px -50px 0 #202020;
       width: 400px;
       height: 530px;
       margin: 120px 0 0 50px;
@@ -163,7 +172,7 @@
 
   #about .introduce {
     line-height: 2em;
-    margin-top: 120px;
+    margin-top: 130px;
   }
 
   #about .process {
@@ -200,6 +209,8 @@
   }
   
   #works .list img {
+    background-color: #ececec;
+    padding: 25px 25px 25px 25px;
     width: 100%;
     height: 300px;
     display: block;
