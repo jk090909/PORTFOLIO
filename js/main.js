@@ -4,20 +4,20 @@ $(function(){
     // main typing text
     let typingBool = false; 
     let typingIdx=0; 
-    let typingTxt = $(".typing-txt").text();
-    typingTxt=typingTxt.split("");
-    if(typingBool==false){
+    let typingTxt = $(".typing-txt").text(); // 타이핑될 텍스트
+    typingTxt=typingTxt.split(""); // 한글자씩 자름
+    if(typingBool==false){ // 타이핑이 진행되지 않으면
        typingBool=true; 
        
-       let tyInt = setInterval(typing,100);
+       let tyInt = setInterval(typing,100); // 반복동작
      } 
      
      function typing(){ 
-       if(typingIdx<typingTxt.length){
-         $(".typing").append(typingTxt[typingIdx]);
+       if(typingIdx<typingTxt.length){ // 타이핑될 텍스트 길이만큼 반복
+         $(".typing").append(typingTxt[typingIdx]); // 한글자씩 이어준다
          typingIdx++; 
        } else { 
-         clearInterval(tyInt);
+         clearInterval(tyInt); // 끝나면 반복종료
        } 
      }
 });
